@@ -4,8 +4,6 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-def baseview(request):
-    return render(request,'myapp/base.html')
 def homeview(request):
     return render(request,'myapp/home.html')
 def logoutview(request):

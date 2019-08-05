@@ -18,8 +18,7 @@ from django.urls import path,include
 from webapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.baseview),
-    path('home/',views.homeview),
+    path('',views.homeview),
     path('cust/', views.customerview),
     path('logout/',views.logoutview),
     path('accounts/',include('django.contrib.auth.urls')),
