@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+<div class="container" align="center">
+    <h1> login in to view account details</h1>
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-lg btn-primary">login</button>
+    </form>
+</div>
+{% endblock %}
