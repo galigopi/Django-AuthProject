@@ -1,12 +1,11 @@
 <!Doctype html>
 {% load staticfiles %}
-
 <html>
 <head>
 <title>this is base</title>
   <link href="{% static 'css/mycss.css' %}" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 
@@ -20,17 +19,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">bank home <span class="sr-only">(current)</span></a></li>
-        <li><a href="cust/">customers servies</a></li>
+        <li class="active"><a href="">bank home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/cust">customers servies</a></li>
+        <li><a href="/admin">admin login</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="accounts/login/">login</a></li>
-        <li><a href="accounts/logout/">logout</a> </li>
+        <li><a href="/accounts/login/">login</a></li>
+        <li><a href="/accounts/logout/">logout</a> </li>
+        <li><a href="/regis" >SIGNUP</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-</body>
 {% block body_block %}
 {% endblock %}
+</body>
 </html>
