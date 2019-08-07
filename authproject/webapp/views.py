@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from webapp.forms import signupform
+from webapp.forms import SignUpForm
 from django.http import HttpResponseRedirect
 # Create your views here.
 def homeview(request):
@@ -11,10 +11,12 @@ def logoutview(request):
 def customerview(request):
     return render(request,'myapp/customers.html')
 def registration_view(request):
-    form=signupform()
-    if request.method =="Post":
-        form.signupform(request.post)
-        form.save(commit=True)
+    form = SignUpForm()
+    if request.method =='POST':
+        form=SignUpForm(request.POST)
+        User=form.save(commit=True)
+        User.set_password(User.password)
+        User.save()
         return HttpResponseRedirect('/accounts/login')
     return render(request,"myapp/registration.html",{'form':form})
 
